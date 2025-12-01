@@ -4,10 +4,8 @@ import terminalio
 from adafruit_display_text.label import Label
 from adafruit_matrixportal.matrixportal import MatrixPortal
 
-BASE_URL = "https://hacker-news.firebaseio.com/v0"
-ENDPOINT = "topstories"
 
-abbreviation = {
+ABBREVIATIONS = {
     "topstories": "top",
     "newstories": "new",
     "beststories": "best",
@@ -15,6 +13,9 @@ abbreviation = {
     "showstories": "show",
     "jobstories": "job",
 }
+ENDPOINT = "topstories"
+
+BASE_URL = "https://hacker-news.firebaseio.com/v0"
 
 matrixportal = MatrixPortal(status_neopixel=board.NEOPIXEL, debug=False)
 display = matrixportal.display
@@ -48,7 +49,7 @@ matrixportal.add_text(
 matrixportal.add_text(
     text_font=font,
     text_position=(6 * 2 + 1, height // 8 + 2),
-    text=abbreviation[ENDPOINT],
+    text=ABBREVIATIONS[ENDPOINT],
     text_color=0xFFFFFF,
 )
 
@@ -68,13 +69,15 @@ loading = matrixportal.add_text(
 while True:
     matrixportal.set_text("Loading...", loading)
     story_ids = network.fetch(f"{BASE_URL}/{ENDPOINT}.json")
-    if not story_ids.status_code == 200:
-        raise Error("Network call failed for some reason.")
-    matrixportal.set_text("", loading)
-    for story_id in story_ids.json():
-        matrixportal.scrolling = True
-        result = network.fetch_data(
-            f"{BASE_URL}/item/{story_id}.json", json_path=("title",)
-        )[0]
-        matrixportal.set_text(result, body)
-        matrixportal.scroll_text(0.075)
+    if story_ids.status_code == 200:
+        matrixportal.set_text("", loading)
+        for story_id in story_ids.json()[:25]:
+            try:
+                matrixportal.scrolling = True
+                result = network.fetch_data(f"{BASE_URL}/item/{story_id}.json", json_path=("title",))[0]
+                matrixportal.set_text(result, body)
+                matrixportal.scroll_text(frame_delay=0.025)
+            except:
+                continue
+    else:
+        continue
