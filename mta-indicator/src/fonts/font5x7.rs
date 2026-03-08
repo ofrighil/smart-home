@@ -958,7 +958,7 @@ const CHAR_UNKNOWN: [u8; 7] = [
     0b11111,
 ];
 
-pub(in crate::fonts) fn get_char(ch: char) -> &'static [u8; 7] { 
+pub(super) fn get_char(ch: char) -> &'static [u8; 7] { 
     match ch {
         'A' => &CHAR_A,
         'B' => &CHAR_B,

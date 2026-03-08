@@ -233,12 +233,19 @@ const CHAR_Z: [u8; 6] = [
 ];
 
 const CHAR_A_LOWER: [u8; 6] = [
+    // 0b0000,
+    // 0b0001,
+    // 0b0111,
+    // 0b1011,
+    // 0b0111,
+    // 0b0000,
+
     0b0000,
     0b0110,
-    0b0001,
+    0b1010,
+    0b1010,
     0b0111,
-    0b1001,
-    0b0111,
+    0b0000,
 ];
 
 const CHAR_B_LOWER: [u8; 6] = [
@@ -246,17 +253,17 @@ const CHAR_B_LOWER: [u8; 6] = [
     0b1000,
     0b1110,
     0b1001,
-    0b1001,
     0b1110,
+    0b0000,
 ];
 
 const CHAR_C_LOWER: [u8; 6] = [
     0b0000,
+    0b0110,
+    0b1000,
+    0b1000,
+    0b0110,
     0b0000,
-    0b0110,
-    0b1000,
-    0b1000,
-    0b0110,
 ];
 
 const CHAR_D_LOWER: [u8; 6] = [
@@ -264,17 +271,17 @@ const CHAR_D_LOWER: [u8; 6] = [
     0b0001,
     0b0111,
     0b1001,
-    0b1001,
     0b0111,
+    0b0000,
 ];
 
 const CHAR_E_LOWER: [u8; 6] = [
     0b0000,
     0b0110,
-    0b1001,
     0b1111,
     0b1000,
     0b0110,
+    0b0000,
 ];
 
 const CHAR_F_LOWER: [u8; 6] = [
@@ -283,7 +290,7 @@ const CHAR_F_LOWER: [u8; 6] = [
     0b1110,
     0b0100,
     0b0100,
-    0b0100,
+    0b0000,
 ];
 
 const CHAR_G_LOWER: [u8; 6] = [
@@ -301,7 +308,7 @@ const CHAR_H_LOWER: [u8; 6] = [
     0b1110,
     0b1001,
     0b1001,
-    0b1001,
+    0b0000,
 ];
 
 const CHAR_I_LOWER: [u8; 6] = [
@@ -310,7 +317,7 @@ const CHAR_I_LOWER: [u8; 6] = [
     0b0100,
     0b0100,
     0b0100,
-    0b0100,
+    0b0000,
 ];
 
 const CHAR_J_LOWER: [u8; 6] = [
@@ -323,12 +330,12 @@ const CHAR_J_LOWER: [u8; 6] = [
 ];
 
 const CHAR_K_LOWER: [u8; 6] = [
-    0b1000,
+    0b0000,
     0b1001,
     0b1010,
-    0b1100,
-    0b1010,
+    0b1110,
     0b1001,
+    0b0000,
 ];
 
 const CHAR_L_LOWER: [u8; 6] = [
@@ -336,35 +343,35 @@ const CHAR_L_LOWER: [u8; 6] = [
     0b0100,
     0b0100,
     0b0100,
-    0b0100,
     0b0010,
+    0b0000,
 ];
 
 const CHAR_M_LOWER: [u8; 6] = [
-    0b0000,
     0b0000,
     0b1001,
     0b1111,
     0b1001,
     0b1001,
+    0b0000,
 ];
 
 const CHAR_N_LOWER: [u8; 6] = [
-    0b0000,
     0b0000,
     0b1110,
     0b1001,
     0b1001,
     0b1001,
+    0b0000,
 ];
 
 const CHAR_O_LOWER: [u8; 6] = [
     0b0000,
+    0b0110,
+    0b1001,
+    0b1001,
+    0b0110,
     0b0000,
-    0b0110,
-    0b1001,
-    0b1001,
-    0b0110,
 ];
 
 const CHAR_P_LOWER: [u8; 6] = [
@@ -387,65 +394,65 @@ const CHAR_Q_LOWER: [u8; 6] = [
 
 const CHAR_R_LOWER: [u8; 6] = [
     0b0000,
-    0b0000,
-    0b1110,
+    0b0110,
     0b1001,
     0b1000,
     0b1000,
+    0b0000,
 ];
 
 const CHAR_S_LOWER: [u8; 6] = [
-    0b0000,
-    0b0110,
-    0b1000,
-    0b0110,
+    0b0011,
+    0b0100,
+    0b0010,
     0b0001,
-    0b1110,
+    0b0110,
+    0b0000,
 ];
 
 const CHAR_T_LOWER: [u8; 6] = [
-    0b0100,
     0b0100,
     0b1110,
     0b0100,
     0b0100,
     0b0010,
+    0b0000,
 ];
 
 const CHAR_U_LOWER: [u8; 6] = [
     0b0000,
-    0b0000,
     0b1001,
     0b1001,
     0b1001,
     0b0110,
+    0b0000,
 ];
 
 const CHAR_V_LOWER: [u8; 6] = [
     0b0000,
+    0b1001,
+    0b1001,
+    0b0110,
+    0b0110,
     0b0000,
-    0b1001,
-    0b1001,
-    0b0110,
-    0b0110,
 ];
 
 const CHAR_W_LOWER: [u8; 6] = [
-    0b0000,
     0b0000,
     0b1001,
     0b1001,
     0b1111,
     0b1001,
+    0b0000,
 ];
 
 const CHAR_X_LOWER: [u8; 6] = [
     0b0000,
+    0b1001,
+    0b0110,
+    0b0110,
+    0b1001,
     0b0000,
-    0b1001,
-    0b0110,
-    0b0110,
-    0b1001,
 ];
 
 const CHAR_Y_LOWER: [u8; 6] = [
@@ -459,11 +466,11 @@ const CHAR_Y_LOWER: [u8; 6] = [
 
 const CHAR_Z_LOWER: [u8; 6] = [
     0b0000,
-    0b0000,
     0b1111,
     0b0010,
     0b0100,
     0b1111,
+    0b0000,
 ];
 
 const CHAR_0: [u8; 6] = [
@@ -476,11 +483,11 @@ const CHAR_0: [u8; 6] = [
 ];
 
 const CHAR_1: [u8; 6] = [
-    0b0100,
-    0b1100,
-    0b0100,
-    0b0100,
-    0b1110,
+    0b0010,
+    0b0110,
+    0b0010,
+    0b0010,
+    0b0111,
     0b0000,
 ];
 
@@ -602,11 +609,11 @@ const CHAR_DOLLAR: [u8; 6] = [
 ];
 
 const CHAR_PERCENT: [u8; 6] = [
+    0b0000,
     0b1001,
     0b0010,
     0b0100,
     0b1001,
-    0b0000,
     0b0000,
 ];
 
@@ -676,7 +683,7 @@ const CHAR_COMMA: [u8; 6] = [
 const CHAR_DASH: [u8; 6] = [
     0b0000,
     0b0000,
-    0b1111,
+    0b1110,
     0b0000,
     0b0000,
     0b0000,
@@ -692,11 +699,11 @@ const CHAR_PERIOD: [u8; 6] = [
 ];
 
 const CHAR_SLASH: [u8; 6] = [
+    0b0000,
     0b0001,
     0b0010,
     0b0100,
     0b1000,
-    0b0000,
     0b0000,
 ];
 
@@ -773,11 +780,11 @@ const CHAR_LBRACKET: [u8; 6] = [
 ];
 
 const CHAR_BACKSLASH: [u8; 6] = [
+    0b0000,
     0b1000,
     0b0100,
     0b0010,
     0b0001,
-    0b0000,
     0b0000,
 ];
 
@@ -832,7 +839,7 @@ const CHAR_PIPE: [u8; 6] = [
     0b0100,
     0b0100,
     0b0100,
-    0b0100,
+    0b0000,
 ];
 
 const CHAR_RBRACE: [u8; 6] = [
@@ -846,9 +853,9 @@ const CHAR_RBRACE: [u8; 6] = [
 
 const CHAR_TILDE: [u8; 6] = [
     0b0000,
+    0b0000,
     0b0101,
     0b1010,
-    0b0000,
     0b0000,
     0b0000,
 ];
@@ -862,7 +869,7 @@ const CHAR_UNKNOWN: [u8; 6] = [
     0b1111,
 ];
 
-pub(in crate::fonts) fn get_char(ch: char) -> &'static [u8; 6] {
+pub(super) fn get_char(ch: char) -> &'static [u8; 6] {
     match ch {
         'A' => &CHAR_A,
         'B' => &CHAR_B,
