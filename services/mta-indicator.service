@@ -1,0 +1,12 @@
+[Unit]
+Description="MTA Indicator"
+After=network.target
+
+[Service]
+Type=simple
+User=worker
+WorkingDirectory=/home/worker/smart-home
+ExecStart=/home/worker/smart-home/mta-indicator/target/release/mta-indicator
+Restart=always
+RestartSec=10
+ExecStopPost=/bin/sh -c 'echo "$(date): Service stopped or system shut down" >> /home/log/mta-indicator_shutdown_history.log
